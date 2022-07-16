@@ -1,0 +1,137 @@
+html {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: scroll;
+}
+body {
+    background: #131313;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, arial, sans-serif;
+    min-height: 100%;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+::selection {
+    background: rgba(115,130,144, 0.996);
+    color: #F2F5F9;
+    text-shadow: none;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(4vh);
+    } 
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes growIn {
+    0% {
+        transform: scale(0.79);
+        opacity: 0;
+    } 
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    } 
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.main {
+    margin-top: 8vw;
+    margin-left: 3vw;
+    z-index: 10;
+}
+
+.header-tom {
+    color: #F2F5F9;
+    position: relative;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 8vw;
+    height: 9vw;
+    overflow: hidden;
+    font-weight: 800;
+    z-index: 10;
+
+    transform-origin: 0 50%;
+    transform: scale(0.79);
+    opacity: 0;
+    animation: growIn 0.5s ease 0.5s forwards;
+}
+
+.header-tom .header-jones {
+    font-weight: 100;
+}
+
+.link-box {
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.link-box span {
+    font-size: 1.5em;
+    height: 1.75em;
+    margin: 0;
+    margin-right: 10px;
+    color: #CED4DD;
+    font-weight: 200;
+    position: relative;
+    display: inline-block;
+
+    transform: translateY(9vw);
+    animation: slideUp 0.5s ease 1.5s forwards;
+}
+
+.link-box span a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-box span.blue a,  .link-box span.blue a:visited {
+    color: #88C0D0;
+}
+
+.link-box span.blue a:hover {
+    color: #6EFAFB;
+}
+
+#rain {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+
+    visibility: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease 2s forwards;
+}

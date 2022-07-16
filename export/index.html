@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<link rel="stylesheet" href="./style.css">
+
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+		<script type="module">
+			import init, { setup } from './portfolio.js';
+
+			async function run() {
+				await init();
+				setup();
+			}
+			run();
+		</script>
+		
+	</body>
+</html>
